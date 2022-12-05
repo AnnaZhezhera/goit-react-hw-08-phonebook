@@ -2,11 +2,11 @@ import React from 'react';
 import { FilterBlock, FindContactWrapp } from './FilterBlock.styled';
 import { setNameFilter } from '../../redux/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { getNameFilter } from '../../redux/selectors';
+import { selectNameFilter } from 'redux/contacts/selectors';
 
 export default function Filter() {
   const dispatch = useDispatch();
-  const filteredName = useSelector(getNameFilter);
+  const filteredName = useSelector(selectNameFilter);
 
   return (
     <FindContactWrapp>

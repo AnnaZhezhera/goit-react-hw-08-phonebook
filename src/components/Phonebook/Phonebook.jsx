@@ -1,12 +1,12 @@
 import React from 'react';
 import { PhonebookForm, PhonebookWrapp } from './Phonebook.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../../redux/selectors';
-import { addContact } from 'redux/operations';
+import { selectContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/operations';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = event => {
     event.preventDefault();
