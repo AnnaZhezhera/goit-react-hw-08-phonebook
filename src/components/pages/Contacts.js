@@ -9,7 +9,6 @@ import Contacts from 'components/Contacts/Contacts';
 
 export default function ContactsList() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
