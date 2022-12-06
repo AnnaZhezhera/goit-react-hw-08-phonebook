@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const PhonebookWrapp = styled.div`
-  width: 300px;
+  text-align: center;
 `;
 
 export const PhonebookForm = styled.form`
-  display: flex;
-  flex-basis: 100%;
-  flex-direction: column;
+  display: inline-block;
   text-align: left;
 
   label {
@@ -17,7 +15,7 @@ export const PhonebookForm = styled.form`
 
   input {
     margin-bottom: 10px;
-    width: 200px;
+    width: 300px;
   }
 
   div {

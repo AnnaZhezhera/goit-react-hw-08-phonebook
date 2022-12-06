@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const ContactBlock = styled.div`
-  width: 350px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ListOfContacts = styled.ul`
+  display: flex;
+  flex-direction: column;
   min-height: 100px;
   padding-left: 0;
+  min-width: 300px;
   li {
     display: flex;
     justify-content: space-between;
