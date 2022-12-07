@@ -1,8 +1,8 @@
 import React from 'react';
-import { PhonebookForm, PhonebookWrapp } from './Phonebook.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import css from './Phonebook.module.css';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
@@ -27,11 +27,12 @@ export default function Phonebook() {
   };
 
   return (
-    <PhonebookWrapp>
-      <PhonebookForm onSubmit={handleSubmit}>
-        <label>
+    <div className={css.phonebookWrapp}>
+      <form className={css.phonebookForm} onSubmit={handleSubmit}>
+        <label className={css.label}>
           Name:
           <input
+            className={css.input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -39,9 +40,10 @@ export default function Phonebook() {
             required
           />
         </label>
-        <label>
+        <label className={css.label}>
           Number:
           <input
+            className={css.input}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -50,9 +52,13 @@ export default function Phonebook() {
           />
         </label>
         <div>
-          <input type="submit" value="Add contact" />
+          <input
+            className={css.buttonInput}
+            type="submit"
+            value="Add contact"
+          />
         </div>
-      </PhonebookForm>
-    </PhonebookWrapp>
+      </form>
+    </div>
   );
 }

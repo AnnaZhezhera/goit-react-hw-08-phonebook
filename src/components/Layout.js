@@ -1,7 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar/AppBar.js';
 import { Suspense } from 'react';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Layout = () => {
   return (
@@ -10,7 +12,12 @@ export const Layout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-      <Toaster position="top-right" reverseOrder={false} />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        closeOnClick
+        theme="colored"
+      />
     </div>
   );
 };

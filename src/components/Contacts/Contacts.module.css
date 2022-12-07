@@ -1,0 +1,36 @@
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.listOfContacts {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  padding-left: 0;
+  margin-top: 0;
+  min-width: 300px;
+}
+
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #2a363b;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightseagreen;
+  color: white;
+  font-weight: 700;
+}

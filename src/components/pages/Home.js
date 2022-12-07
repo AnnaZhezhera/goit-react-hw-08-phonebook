@@ -16,7 +16,8 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>
-        Contact manager welcome page{' '}
+        Welcome to the phonebook! Please register or log in to get an access to
+        your contacts{' '}
         <span role="img" aria-label="Greeting icon">
           📞📝
         </span>

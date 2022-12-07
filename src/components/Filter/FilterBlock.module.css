@@ -1,0 +1,13 @@
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 300px;
+}
+
+.findContactWrapp {
+  display: flex;
+  justify-content: center;
+}

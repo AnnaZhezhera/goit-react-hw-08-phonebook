@@ -1,32 +1,32 @@
-.form {
+.phonebookWrapp {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.phonebookForm {
   display: inline-block;
-  width: 320px;
+  text-align: left;
 }
 
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
-  text-align: left;
 }
 
 .input {
-  font-size: 14px;
-  margin-top: 5px;
-  padding: 10px;
-  border: 1px solid #2a363b;
-  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 300px;
 }
 
-.button {
+.buttonInput {
   width: 100px;
-  padding: 5px 10px;
+  text-align: center;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid #2a363b;
   cursor: pointer;
 }
-
-.button:hover {
+.buttonInput:hover {
   background-color: lightseagreen;
   color: white;
   font-weight: 700;

@@ -7,7 +7,7 @@ import {
   selectError,
 } from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/operations';
-import { ContactBlock, ListOfContacts } from './Contacts.styled';
+import css from './Contacts.module.css';
 
 export const getVisibleContacts = (contacts, filteredName) => {
   if (!filteredName) {
@@ -38,21 +38,25 @@ export default function Contacts() {
   const handleDelete = item => dispatch(deleteContact(item.id));
 
   return (
-    <ContactBlock>
-      <div style={{ height: '10px' }}>
-        {isLoading && !error && <b>Request in progress...</b>}
-      </div>
-      <ListOfContacts>
+    <div className={css.contactsBlock}>
+      <div style={{ height: '20px' }}></div>
+      {isLoading && !error && <b>Request in progress...</b>}
+
+      <ul className={css.listOfContacts}>
         {contacts.length > 0 &&
           visibleContacts.map(item => (
-            <li key={item.id}>
+            <li className={css.contactItem} key={item.id}>
               {item.name}: {item.number}
-              <button type="button" onClick={() => handleDelete(item)}>
+              <button
+                className={css.button}
+                type="button"
+                onClick={() => handleDelete(item)}
+              >
                 Delete
               </button>
             </li>
           ))}
-      </ListOfContacts>
-    </ContactBlock>
+      </ul>
+    </div>
   );
 }
