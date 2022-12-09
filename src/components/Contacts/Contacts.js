@@ -8,6 +8,7 @@ import {
 } from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 import { DeleteIcon } from '@chakra-ui/icons';
+import { Box } from '@chakra-ui/react';
 import css from './Contacts.module.css';
 
 export const getVisibleContacts = (contacts, filteredName) => {
@@ -40,8 +41,7 @@ export default function Contacts() {
 
   return (
     <div className={css.contactsBlock}>
-      <div style={{ height: '20px' }}></div>
-      {isLoading && !error && <b>Request in progress...</b>}
+      <Box h="7">{isLoading && !error && <b>Request in progress...</b>}</Box>
 
       <ul className={css.listOfContacts}>
         {contacts.length > 0 &&

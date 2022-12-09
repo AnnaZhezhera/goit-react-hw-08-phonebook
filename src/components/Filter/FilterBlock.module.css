@@ -1,13 +1,9 @@
-.label {
-  display: flex;
-  flex-direction: column;
-}
-
-.input {
-  width: 300px;
-}
-
 .findContactWrapp {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  height: 80px;
+  text-align: left;
 }

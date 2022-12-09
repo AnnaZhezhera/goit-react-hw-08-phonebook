@@ -2,10 +2,9 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-import { AddIcon, PhoneIcon } from '@chakra-ui/icons';
+import { PhoneIcon } from '@chakra-ui/icons';
 import { Icon } from '@chakra-ui/react';
 import { BsFillPersonFill } from 'react-icons/bs';
-
 import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
 import css from './Phonebook.module.css';
 
@@ -50,6 +49,8 @@ export default function Phonebook() {
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
               w={350}
+              borderColor="gray.500"
+              bg={'white'}
             />
           </InputGroup>
         </label>
@@ -63,10 +64,12 @@ export default function Phonebook() {
             />
             <Input
               type="tel"
-              name="name"
+              name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
+              borderColor="gray.500"
+              bg={'white'}
             />
           </InputGroup>
         </label>

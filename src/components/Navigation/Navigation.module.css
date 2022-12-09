@@ -4,14 +4,29 @@
 
 .link {
   display: flex;
+  align-items: center;
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
   color: #2a363b;
 }
 
-.link.active {
+.linkActive {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
   color: lightseagreen;
+}
+
+.icon {
+  align-self: center;
+}
+
+.iconActive {
+  fill: lightseagreen;
+  align-self: center;
 }
 
 .link:hover {

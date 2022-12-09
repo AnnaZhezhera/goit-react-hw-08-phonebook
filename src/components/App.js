@@ -1,8 +1,3 @@
-// import { AppWrapp } from './App.styled';
-// import Phonebook from './Phonebook/Phonebook';
-// import Contacts from './Contacts/Contacts';
-// import Filter from './Filter/Filter';
-
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
@@ -12,6 +7,7 @@ import { Layout } from './Layout';
 import { useAuth } from 'hooks/useAuth';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import NotFound from './NotFound';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const RegisterPage = lazy(() => import('./pages/Register'));
@@ -58,6 +54,7 @@ export const App = () => {
             }
           />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HelmetProvider>
   );
