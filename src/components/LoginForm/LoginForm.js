@@ -27,6 +27,7 @@ export const LoginForm = () => {
             type="email"
             name="email"
             placeholder="example@mail.com"
+            required
           />
         </label>
         <label className={css.label}>
@@ -36,6 +37,7 @@ export const LoginForm = () => {
             type="password"
             name="password"
             placeholder="Enter your password"
+            required
           />
         </label>
         <div

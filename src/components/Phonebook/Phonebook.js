@@ -2,6 +2,11 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import { AddIcon, PhoneIcon } from '@chakra-ui/icons';
+import { Icon } from '@chakra-ui/react';
+import { BsFillPersonFill } from 'react-icons/bs';
+
+import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
 import css from './Phonebook.module.css';
 
 export default function Phonebook() {
@@ -31,25 +36,39 @@ export default function Phonebook() {
       <form className={css.phonebookForm} onSubmit={handleSubmit}>
         <label className={css.label}>
           Name:
-          <input
-            className={css.input}
-            type="text"
-            name="name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-          />
+          <InputGroup mb={5} mt={2} borderColor="gray.500">
+            <InputLeftElement
+              pointerEvents="none"
+              children={
+                <Icon as={BsFillPersonFill} color="gray.500" size="sm" />
+              }
+            />
+            <Input
+              type="tel"
+              name="name"
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              required
+              w={350}
+            />
+          </InputGroup>
         </label>
+
         <label className={css.label}>
           Number:
-          <input
-            className={css.input}
-            type="tel"
-            name="number"
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-          />
+          <InputGroup mb={7} mt={2} borderColor="gray.500">
+            <InputLeftElement
+              pointerEvents="none"
+              children={<PhoneIcon color="gray.500" size="sm" />}
+            />
+            <Input
+              type="tel"
+              name="name"
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              required
+            />
+          </InputGroup>
         </label>
         <div>
           <input

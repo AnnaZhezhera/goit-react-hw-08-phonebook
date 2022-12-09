@@ -29,6 +29,7 @@ export const RegisterForm = () => {
             type="text"
             name="name"
             placeholder="Denys Stasiuk"
+            required
           />
         </label>
         <label className={css.label}>
@@ -38,6 +39,7 @@ export const RegisterForm = () => {
             type="email"
             name="email"
             placeholder="example@mail.com"
+            required
           />
         </label>
         <label className={css.label}>
@@ -47,6 +49,7 @@ export const RegisterForm = () => {
             type="password"
             name="password"
             placeholder="Enter your password"
+            required
           />
         </label>
         <div

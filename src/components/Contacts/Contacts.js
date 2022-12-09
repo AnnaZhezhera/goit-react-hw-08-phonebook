@@ -7,6 +7,7 @@ import {
   selectError,
 } from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/operations';
+import { DeleteIcon } from '@chakra-ui/icons';
 import css from './Contacts.module.css';
 
 export const getVisibleContacts = (contacts, filteredName) => {
@@ -52,7 +53,7 @@ export default function Contacts() {
                 type="button"
                 onClick={() => handleDelete(item)}
               >
-                Delete
+                Delete <DeleteIcon />
               </button>
             </li>
           ))}
