@@ -31,8 +31,6 @@ export default function Contacts() {
   const filteredName = useSelector(selectNameFilter);
   const visibleContacts = getVisibleContacts(contacts, filteredName);
 
-  console.log('contacts', visibleContacts);
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);

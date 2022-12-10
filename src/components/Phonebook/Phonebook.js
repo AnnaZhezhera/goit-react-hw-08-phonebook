@@ -6,6 +6,7 @@ import { PhoneIcon } from '@chakra-ui/icons';
 import { Icon } from '@chakra-ui/react';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
+import { toast } from 'react-toastify';
 import css from './Phonebook.module.css';
 
 export default function Phonebook() {
@@ -24,7 +25,7 @@ export default function Phonebook() {
     if (existingArray.length === 0) {
       dispatch(addContact({ name, phone }));
     } else {
-      alert(`${name} is already in contacts.`);
+      toast.warn(`${name} is already in contacts.`);
     }
 
     form.reset();
